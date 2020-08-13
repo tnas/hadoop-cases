@@ -1,0 +1,3 @@
+com/tnas/hadoop/cases/wordcount/TokenizerMapper.class
+com/tnas/hadoop/cases/wordcount/ContadorPalavras.class
+com/tnas/hadoop/cases/wordcount/IntSumReducer.class
