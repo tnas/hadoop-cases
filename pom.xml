@@ -13,7 +13,7 @@
         <hadoop.core>1.2.1</hadoop.core>
         <hadoop.wordcount>com.tnas.hadoop.cases.wordcount.ContadorPalavras</hadoop.wordcount>
         <hadoop.hashtagcount>com.tnas.hadoop.cases.hashtagcount.ContabilizadorHashTags</hadoop.hashtagcount>
-        <hadoop.run.case>${hadoop.hashtagcount}</hadoop.run.case>
+        <hadoop.run.case>${hadoop.wordcount}</hadoop.run.case>
     </properties>
     <dependencies>
         <!-- Testes Unitários -->
@@ -30,10 +30,16 @@
             <classifier>hadoop2</classifier>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+
         <!-- Cliente Principal Hadoop Mapreduce -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-mapreduce-client-core</artifactId>
+            <artifactId>hadoop-client</artifactId>
             <version>${hadoop.client}</version>
         </dependency>
         <!-- Nucleo Hadoop -->
