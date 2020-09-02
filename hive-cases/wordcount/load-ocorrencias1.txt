@@ -1,0 +1,4 @@
+Hadoop,1
+Minicurso,1
+Paraná,1
+em,1

@@ -1,0 +1,4 @@
+2012,4
+CSBC,3
+Curitiba,2
+JAI,2

@@ -13,7 +13,7 @@
         <hadoop.core>1.2.1</hadoop.core>
         <hadoop.wordcount>com.tnas.hadoop.cases.wordcount.ContadorPalavras</hadoop.wordcount>
         <hadoop.hashtagcount>com.tnas.hadoop.cases.hashtagcount.ContabilizadorHashTags</hadoop.hashtagcount>
-        <hadoop.run.case>${hadoop.wordcount}</hadoop.run.case>
+        <hadoop.run.case>${hadoop.hashtagcount}</hadoop.run.case>
     </properties>
     <dependencies>
         <!-- Testes Unitários -->

@@ -22,6 +22,7 @@ public class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable>
     public void reduce(Text key, Iterable<IntWritable> values, Context context) 
             throws IOException, InterruptedException {
         
+        
         int sum = 0;
         for (IntWritable val: values) {
             sum += val.get();
@@ -29,5 +30,10 @@ public class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable>
         
         result.set(sum);
         context.write(key, result);
+        
+//        result.set(sum % 2);
+//        Text keyInfo = new Text("Chave: " + key.toString());
+//        context.write(keyInfo, result);
+        
     }
 }

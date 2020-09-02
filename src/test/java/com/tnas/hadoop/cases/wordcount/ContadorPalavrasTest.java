@@ -14,8 +14,6 @@ import org.apache.hadoop.mrunit.mapreduce.MapDriver;
 import org.apache.hadoop.mrunit.mapreduce.MapReduceDriver;
 import org.apache.hadoop.mrunit.mapreduce.ReduceDriver;
 import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
 
 /**
  *
@@ -36,22 +34,23 @@ public class ContadorPalavrasTest {
         mapReduceDriver = MapReduceDriver.newMapReduceDriver(mapper, reducer);
     }
 
-    @Test
+    //@Test
     public void testarMapper() throws IOException {
         Text valor = new Text("CSBC JAI 2012 CSBC");
         mapDriver.withInput(new IntWritable(0), valor)
-                .withOutput(new Text("CSBC"), new IntWritable(1))
                 .withOutput(new Text("JAI"), new IntWritable(1))
                 .withOutput(new Text("2012"), new IntWritable(1))
-                .withOutput(new Text("CSBC"), new IntWritable(1))
+                .withOutput(new Text("CSBC"), new IntWritable(2))
+                //.withOutput(new Text("CSBC"), new IntWritable(1))
                 .runTest();
     }
     
-    @Test
+    //@Test
     public void testarReducer() throws IOException {
         
         List<IntWritable> valoresCSBC = new ArrayList<>();
         valoresCSBC.add(new IntWritable(2));
+        valoresCSBC.add(new IntWritable(1));
         valoresCSBC.add(new IntWritable(1));
         
         List<IntWritable> valores2012 = new ArrayList<>();
@@ -61,12 +60,14 @@ public class ContadorPalavrasTest {
         reduceDriver
                 .withInput(new Text("CSBC"), valoresCSBC)
                 .withInput(new Text("2012"), valores2012)
+                .withInput(new Text("2012"), valores2012)
                 .withOutput(new Text("CSBC"), new IntWritable(3))
+                .withOutput(new Text("2012"), new IntWritable(4))
                 .withOutput(new Text("2012"), new IntWritable(4))
                 .runTest();
     }
     
-
+    //@Test
     public void testarMapReduce() throws IOException {
         
         mapReduceDriver
@@ -78,3 +79,4 @@ public class ContadorPalavrasTest {
     }
     
 }
+

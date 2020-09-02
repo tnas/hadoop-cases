@@ -7,6 +7,8 @@ package com.tnas.hadoop.cases.wordcount;
 
 import java.io.IOException;
 import java.util.StringTokenizer;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -17,6 +19,7 @@ import org.apache.hadoop.mapreduce.Mapper;
  */
 public class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
 
+    private static final Log log = LogFactory.getLog(TokenizerMapper.class);
     private final IntWritable one = new IntWritable(1);
     private final Text word = new Text();
 
@@ -24,10 +27,12 @@ public class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
     public void map(Object key, Text value, Context context) 
             throws IOException, InterruptedException {
         
+        log.info("Chave map: " + key);
         StringTokenizer itr = new StringTokenizer(value.toString());
         while (itr.hasMoreTokens()) {
             word.set(itr.nextToken());
             context.write(word, one);
         }
+
     }
 }

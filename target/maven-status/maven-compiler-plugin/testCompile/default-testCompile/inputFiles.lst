@@ -1,1 +1,2 @@
-/home/thiago/projects/hadoop-cases/src/test/java/com/tnas/hadoop/cases/wordcount/TokenizerMapperTest.java
+/home/thiago/projects/hadoop-cases/src/test/java/com/tnas/hadoop/cases/wordcount/ContadorPalavrasTest.java
+/home/thiago/projects/hadoop-cases/src/test/java/com/tnas/hadoop/cases/avg/MediaMapReduceTeste.java

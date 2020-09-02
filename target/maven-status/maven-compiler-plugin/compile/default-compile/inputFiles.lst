@@ -1,5 +1,8 @@
 /home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/hashtagcount/ContabilizadorHashTags.java
+/home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/avg/MediaMapper.java
+/home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/hashtagcount/HashTagMapper.java
 /home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/wordcount/TokenizerMapper.java
 /home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/wordcount/IntSumReducer.java
 /home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/wordcount/ContadorPalavras.java
-/home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/hashtagcount/HashTagCountMapper.java
+/home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/avg/MediaReducer.java
+/home/thiago/projects/hadoop-cases/src/main/java/com/tnas/hadoop/cases/avg/MediaMapReduce.java

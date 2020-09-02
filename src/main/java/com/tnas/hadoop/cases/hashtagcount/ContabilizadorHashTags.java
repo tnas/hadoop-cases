@@ -33,8 +33,7 @@ public class ContabilizadorHashTags extends Configured implements Tool {
         Job job = Job.getInstance(conf);
 
         job.setJarByClass(ContabilizadorHashTags.class);
-        job.setMapperClass(HashTagCountMapper.class);
-        job.setCombinerClass(IntSumReducer.class);
+        job.setMapperClass(HashTagMapper.class);
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
